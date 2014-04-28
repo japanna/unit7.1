@@ -333,11 +333,16 @@ class Bitset
         return noOfElements;
     }
 
+    /**
+     *  This method returns true if set A is a subset of set B
+     *
+     *  @return    True if this set is a subset of setB
+     */
     public boolean isSubset (Bitset setB) {
         // if one or both sets is null
         if (isNull() || setB.isNull()) return false;
         // if _this_ set has more elements than setB it can't be a subset
-        if (byteArray.length > setB.byteArray.length) return false;
+        if (cardinality() > setB.cardinality()) return false;
         // temp is all the elements that are both in A and B
         Bitset temp = intersect(setB);
         // if set A is the same as temp, then all elements in A are also in B

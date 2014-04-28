@@ -97,6 +97,6 @@ public class TestSets
            default:  System.exit(0);
         
          }
-       } while (command > 0 && command < 6);
+       } while (command > 0 && command < 10);
   }
 }
